@@ -1,6 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+import re
+
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from sign.models.event import Event
 from sign.models.guest import Guest
@@ -14,13 +17,46 @@ def index(request):
     return render(request, "index.html")
 
 
+# 注册（页面无入口需要URL）
+def register(request):
+    if request.method == "POST":
+        register_user = request.POST.get("username")
+        register_passwd = request.POST.get("password")
+        register_repasswd = request.POST.get("re_password")
+        if register_user == "" or register_passwd == "" or register_passwd == "":
+            data = {
+                "error": "字段不能为空"
+            }
+            return render(request, "register.html", data)
+        if register_repasswd != register_passwd:
+            data = {
+                "error": "重复密码与密码不相同"
+            }
+            return render(request, "register.html", data)
+        if User.objects.filter(username=register_user).first():
+            data = {
+                "error": "该账号已存在"
+            }
+            return render(request, "register.html", data)
+        else:
+            try:
+                User.objects.create_user(username=register_user, password=register_passwd)
+                return redirect("/login_action")
+            except Exception:
+                data = {
+                    "error": "出错了"
+                }
+                return render(request, "register.html",data)
+    return render(request, "register.html")
+
+
 # 登录处理
 def login_action(request):
     if request.method == "POST":
         login_username = request.POST.get("username")
         login_password = request.POST.get("password")
         if login_username == '' or login_password == '':
-            return render(request, "index.html", {"error": "username or password null"})
+            return render(request, "index.html", {"error": "账号或密码为空"})
         else:
             user = auth.authenticate(
                 username=login_username, password=login_password)
@@ -31,25 +67,26 @@ def login_action(request):
                 request.session['user'] = login_username  # 将 session 信息记录到浏览器
                 return response
             else:
-                return render(request, "index.html", {"error": "username or password error"})
+                return render(request, "index.html", {"error": "账号或密码错误"})
     else:
         return render(request, "index.html")
 
 
-# 发布会管理
+# 发布会主页面
 @login_required
 def event_manage(request):
-    #username = request.COOKIES.get('user', '')  # 读取浏览器 cookie
+    # username = request.COOKIES.get('user', '')  # 读取浏览器 cookie
     username = request.session.get('user', '')  # 读取浏览器 session
     events = Event.objects.all()
     return render(request, "event_manage.html", {"user": username, "events": events})
+
 
 # 发布会名称搜索
 @login_required
 def search_name(request):
     username = request.session.get('user', '')
     search_name = request.GET.get("name", "")
-    #search_name_bytes = search_name.encode(encoding="utf-8")
+    # search_name_bytes = search_name.encode(encoding="utf-8")
     events = Event.objects.filter(name__contains=search_name)
     if len(events) == 0:
         return render(request, "event_manage.html", {"user": username,
@@ -58,9 +95,9 @@ def search_name(request):
 
 
 # 添加发布会
+@login_required
 def add_event(request):
     username = request.session.get('user', '')
-
     if request.method == 'POST':
         form = AddEventForm(request.POST)  # form 包含提交的数据
         if form.is_valid():
@@ -73,10 +110,10 @@ def add_event(request):
                 status = 1
             else:
                 status = 0
-
+            data = {"user": username, "form": form, "success": "添加发布会成功!"}
             Event.objects.create(
                 name=name, limit=limit, address=address, status=status, start_time=start_time)
-            return render(request, "add_event.html", {"user": username, "form": form, "success": "添加发布会成功!"})
+            return render(request, "add_event.html", data)
 
     else:
         form = AddEventForm()
@@ -111,7 +148,7 @@ def add_guest(request):
         form = AddGuestForm(request.POST)
 
         if form.is_valid():
-            event = form.cleaned_data['event']
+            event = form.cleaned_data['event']  # 名称
             realname = form.cleaned_data['realname']
             phone = form.cleaned_data['phone']
             email = form.cleaned_data['email']
@@ -120,10 +157,12 @@ def add_guest(request):
                 sign = 1
             else:
                 sign = 0
+            data = {"user": username, "form": form, "success": ""}
 
+            data["success"] = "添加发布会成功"
             Guest.objects.create(event=event, realname=realname,
                                  phone=phone, email=email, sign=sign)
-            return render(request, "add_guest.html", {"user": username, "form": form, "success": "添加嘉宾成功!"})
+            return render(request, "add_guest.html", data)
 
     else:
         form = AddGuestForm()
@@ -157,6 +196,7 @@ def search_phone(request):
                                                  "guests": contacts,
                                                  "phone": search_phone})
 
+
 # 签到页面
 @login_required
 def sign_index(request, event_id):
@@ -164,7 +204,7 @@ def sign_index(request, event_id):
     event = get_object_or_404(Event, id=event_id)
     guest_list = Guest.objects.filter(event_id=event_id)
     guest_data = str(len(guest_list))  # 签到人数
-    sign_data = 0                      # 已签到人数
+    sign_data = 0  # 已签到人数
     for guest in guest_list:
         if guest.sign == True:
             sign_data += 1
@@ -195,23 +235,27 @@ def sign_index_action(request, event_id):
 
     result = Guest.objects.filter(phone=phone)
     if not result:
-        return render(request, 'sign_index.html', {'event': event, 'hint': 'phone error.', 'guest': guest_data, 'sign': sign_data})
+        return render(request, 'sign_index.html',
+                      {'event': event, 'hint': 'phone error.', 'guest': guest_data, 'sign': sign_data})
 
     result = Guest.objects.filter(phone=phone, event_id=event_id)
     if not result:
-        return render(request, 'sign_index.html', {'event': event, 'hint': 'event id or phone error.', 'guest': guest_data, 'sign': sign_data})
+        return render(request, 'sign_index.html',
+                      {'event': event, 'hint': 'event id or phone error.', 'guest': guest_data, 'sign': sign_data})
 
     result = Guest.objects.get(event_id=event_id, phone=phone)
 
     if result.sign:
-        return render(request, 'sign_index.html', {'event': event, 'hint': "user has sign in.", 'guest': guest_data, 'sign': sign_data})
+        return render(request, 'sign_index.html',
+                      {'event': event, 'hint': "user has sign in.", 'guest': guest_data, 'sign': sign_data})
     else:
         Guest.objects.filter(event_id=event_id, phone=phone).update(sign='1')
         return render(request, 'sign_index.html', {'event': event, 'hint': 'sign in success!',
                                                    'user': result,
                                                    'guest': guest_data,
-                                                   'sign': str(int(sign_data)+1)
+                                                   'sign': str(int(sign_data) + 1)
                                                    })
+
 
 # 退出系统
 @login_required
