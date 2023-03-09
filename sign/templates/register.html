@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" style="width: 330px;">
+      <form class="form-signin" method="post" >
+          <h2 class="form-signin-heading">注册页面</h2>
+            <label for="inputUsername" class="sr-only">账号</label>
+              <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" autofocus>
+            <label for="inputPassword" class="sr-only">密码</label>
+              <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+            <label for="inputPassword" class="sr-only">重复密码</label>
+              <input name="re_password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+              <p style="color:red">{{error}}</p> <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+      </form>
+    </div>
+  </body>
+
+</html>
