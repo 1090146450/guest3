@@ -70,7 +70,6 @@ def post_login(request):
 
         elif username == "admin" and password == "a123456":
             return response(10200, "login success")
-
         else:
             return response(10104, "username or password error")
     else:
