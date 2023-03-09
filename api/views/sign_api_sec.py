@@ -6,7 +6,8 @@ from django.contrib import auth as django_auth
 import base64
 import time
 import hashlib
-from Crypto.Cipher import AES    # 请安装 Crypto
+# from Crypto.Cipher import AES    # 请安装 Crypto
+from Crypto.Cipher import AES
 import json
 
 

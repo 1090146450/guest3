@@ -59,8 +59,8 @@ def post_login(request):
     参数类型：from-data/x-www-from-urlencode
     """
     if request.method == "POST":
-        username = request.POST('username')
-        password = request.POST('password')
+        username = request.POST['username']
+        password = request.POST['password']
 
         if username is None or password is None:
             return response(10102, "username or passwrord is None")
