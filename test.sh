@@ -25,6 +25,7 @@ if [[ "${du}" != "" ]];then
 else
  echo "无进程直接创建"
 fi
+sellp 2
 uwsgi --ini uwsgi.ini
 echo "启动uwsgi成功"
 nginx -s reload
