@@ -25,8 +25,11 @@ if [[ "${du}" != "" ]];then
 else
  echo "无进程直接创建"
 fi
+sleep 2
 uwsgi --ini uwsgi.ini
+echo "启动uwsgi成功"
 nginx -s reload
+echo "重启NGINX"
 git add .
 git commit -m "更新PID"
 git push origin master

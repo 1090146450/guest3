@@ -4360,3 +4360,287 @@ uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
 uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 Python version: 3.9.1 (default, Feb 17 2023, 13:53:38)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+*** Starting uWSGI 2.0.21 (64bit) on [Thu Mar  9 18:42:04 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100002
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.21 (64bit) on [Thu Mar  9 18:45:19 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Feb 17 2023, 13:53:38)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+*** Starting uWSGI 2.0.21 (64bit) on [Fri Mar 10 10:10:04 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100002
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.21 (64bit) on [Fri Mar 10 11:10:15 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100002
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Feb 17 2023, 13:53:38)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Python main interpreter initialized at 0x1ccf3f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** Starting uWSGI 2.0.21 (64bit) on [Sat Mar 11 10:10:04 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100002
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.21 (64bit) on [Sat Mar 11 10:27:58 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Feb 17 2023, 13:53:38)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Python main interpreter initialized at 0x19cbad0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x19cbad0 pid: 22882 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22882)
+spawned uWSGI worker 1 (pid: 22894, cores: 2)
+spawned uWSGI worker 2 (pid: 22896, cores: 2)
+spawned uWSGI worker 3 (pid: 22897, cores: 2)
+spawned uWSGI worker 4 (pid: 22899, cores: 2)
+[pid: 22897|app: 0|req: 1/1] 118.212.213.189 () {40 vars in 748 bytes} [Sat Mar 11 02:28:12 2023] GET /index/ => generated 804 bytes in 135 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 22897|app: 0|req: 2/2] 118.212.213.189 () {40 vars in 699 bytes} [Sat Mar 11 02:28:12 2023] GET /favicon.ico => generated 3809 bytes in 13 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 1)
+[pid: 22899|app: 0|req: 1/3] 180.101.245.248 () {42 vars in 767 bytes} [Sat Mar 11 02:31:15 2023] GET / => generated 804 bytes in 58 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 22899|app: 0|req: 2/4] 180.101.244.11 () {40 vars in 741 bytes} [Sat Mar 11 02:31:16 2023] GET / => generated 804 bytes in 0 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 1)
+[pid: 22897|app: 0|req: 3/5] 220.196.160.151 () {42 vars in 779 bytes} [Sat Mar 11 02:32:02 2023] GET /index/ => generated 804 bytes in 0 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Sat Mar 11 02:33:09 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:33:09 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:33:09 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:33:09 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:33:09 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:33:09 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:33:09 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:33:09 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.21 (64bit) on [Sat Mar 11 10:33:09 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Feb 17 2023, 13:53:38)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Python main interpreter initialized at 0x1abaad0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1abaad0 pid: 23767 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23767)
+spawned uWSGI worker 1 (pid: 23774, cores: 2)
+spawned uWSGI worker 2 (pid: 23776, cores: 2)
+spawned uWSGI worker 3 (pid: 23777, cores: 2)
+spawned uWSGI worker 4 (pid: 23779, cores: 2)
+Sat Mar 11 02:34:31 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:34:31 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:34:31 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:34:31 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:34:31 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:34:31 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:34:31 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Mar 11 02:34:31 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.21 (64bit) on [Sat Mar 11 10:34:42 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Feb 17 2023, 13:53:38)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+*** Starting uWSGI 2.0.21 (64bit) on [Sat Mar 11 10:35:17 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100002
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Feb 17 2023, 13:53:38)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+*** Starting uWSGI 2.0.21 (64bit) on [Sat Mar 11 10:35:54 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 22 February 2023 11:17:36
+os: Linux-3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022
+nodename: VM-8-15-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/an/guest3
+writing pidfile to uwsgi.pid
+detected binary path: /home/an/python_guest3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/an/guest3
+your processes number limit is 7908
+your memory page size is 4096 bytes
+detected max file descriptor number: 100002
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
