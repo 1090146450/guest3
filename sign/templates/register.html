@@ -1,6 +1,26 @@
 <html>
   <head>
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+             .icp {
+            position: absolute;
+            bottom: 0px;
+            padding: 10px 0;
+            width: auto;
+            height: 36px;
+            text-align: center;
+            color: gray;
+            z-index: 1000;
+        }
+        .icp > a {
+            color: gray;
+            text-decoration: none;
+        }
+        .icp > a:hover {
+            color: #ffa247;
+            text-decoration: none;
+        }
+      </style>
   </head>
   <body>
     <div class="container" style="width: 330px;">
@@ -15,5 +35,7 @@
               <p style="color:red">{{error}}</p> <br>
             <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
       </form>
+        <div class="icp">© 2023 alsoeasy <a href="http://beian.miit.gov.cn/" target="_blank"> 京ICP备2023002782号-1</a>
+        </div>
     </div>
   </body>

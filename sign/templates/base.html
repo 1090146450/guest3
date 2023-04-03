@@ -1,19 +1,39 @@
 <html>
 <head>
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>  .icp {
+        position: absolute;
+        bottom: 0px;
+        padding: 10px 0;
+        width: auto;
+        height: 36px;
+        text-align: center;
+        color: gray;
+        z-index: 1000;
+    }
+
+    .icp > a {
+        color: gray;
+        text-decoration: none;
+    }
+
+    .icp > a:hover {
+        color: #ffa247;
+        text-decoration: none;
+    }</style>
 </head>
 <body>
 {% block content %}
 
-
 {% endblock %}
 
-    <div class="container theme-showcase" role="main">
-      <div class="page-header">
-      </div>
-      <footer class="footer">
-        <p>&copy; Company 2019, Author:虫师</p>
-      </footer>
-    </div> <!-- /container -->
+<div class="container theme-showcase" role="main">
+    <div class="page-header">
+    </div>
+    <footer class="footer">
+        <div class="icp">© 2023 alsoeasy <a href="http://beian.miit.gov.cn/" target="_blank"> 京ICP备2023002782号-1</a>
+        </div>
+    </footer>
+</div> <!-- /container -->
 </body>
 </html>
